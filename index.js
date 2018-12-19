@@ -71,7 +71,11 @@ client.on ("message", (message) => {
         }
         if(msg.startsWith (prefix + "ayaya")) {
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
-        }       
+        } 
+        if (message.content === 'what is my avatar') {
+    
+    message.reply(message.users.avatarURL);
+  }
 })
 
 
