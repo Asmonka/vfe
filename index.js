@@ -73,8 +73,8 @@ client.on ("message", (message) => {
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
         } 
         if (message.content === 'what is my avatar') {
-    
-    message.reply(message.users.avatarURL);
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
   }
 })
 
