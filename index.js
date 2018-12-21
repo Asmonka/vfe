@@ -65,10 +65,7 @@ client.on ("message", (message) => {
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./blonde/" + imageNumber + ".jpg"] })
-        }
-        if(msg.startsWith (prefix + "command")) {
-                message.channel.send ({files: ["./command/command.jpg"]})
-        }
+        }       
         if(msg.startsWith (prefix + "ayaya")) {
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
         }       
