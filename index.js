@@ -19,7 +19,7 @@ client.on ("message", (message) => {
 
         msg = message.content.toLowerCase();
 
-        if(msg.startsWith (prefix + "whit")) {
+        if(msg.startsWith (prefix + "white")) {
             number = 20;
             imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
             message.channel.send({files: ["./white/" + imageNumber + ".jpg"] })
@@ -47,7 +47,7 @@ client.on ("message", (message) => {
                 message.channel.send({files: ["./loli/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "animal")) {
-                number = 10;
+                number = 20;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./animal/" + imageNumber + ".jpg"] })
         }
@@ -72,6 +72,23 @@ client.on ("message", (message) => {
         if(msg.startsWith (prefix + "ayaya")) {
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
         }       
+        if(msg.startsWith (prefix + "command")) {
+                message.delete()
+           embed = new discord.RichEmbed ()
+           .setAuthor ("Command")
+           .addField ("!animal", "animal picture")
+           .addField ("!ayaya", "ayaya GIF") 
+           .addField ("!blonde", "blonde picture")
+           .addField ("!fortnite",  "fortnite picture") 
+           .addField ("!loli",  "loli picture")
+           .addField ("!nani", "nani GIF")
+           .addField ("!overwatch",  "overwatch picture")
+           .addField ("!redhead",  "redhead picture")
+           .addField ("!white",  "white hair picture")
+           .addField ("!yaoi",  "yaoi picture")
+           .addField ("!yuri",  "yuri picture")                            
+           .setColor ("#FF0000");
+           message.channel.send(embed);}
 })
 
 
