@@ -19,7 +19,7 @@ client.on ("message", (message) => {
 
         msg = message.content.toLowerCase();
 
-        if(msg.startsWith (prefix + "white")) {
+        if(msg.startsWith (prefix + "whit")) {
             number = 20;
             imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
             message.channel.send({files: ["./white/" + imageNumber + ".jpg"] })
