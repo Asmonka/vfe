@@ -2,7 +2,7 @@ const discord = require ('discord.js');
 
 var client = new discord.Client();
 
-const token = "NTIzOTY4NjY1NzA4OTIwODMy.DvhPhg.cun2JCuEO8oV8Rz4L2O9AslXcGw";
+const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
         console.log("ready!");
@@ -20,6 +20,7 @@ client.on ("message", (message) => {
         msg = message.content.toLowerCase();
 
         if(msg.startsWith (prefix + "white")) {
+                message.delete()
             number = 20;
             imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
             message.channel.send({files: ["./white/" + imageNumber + ".jpg"] })
@@ -32,41 +33,49 @@ client.on ("message", (message) => {
             }
 
         if(msg.startsWith (prefix + "fortnite")) {
+                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./fortnite/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "overwatch")) {
+                message.delete();
                 number = 30;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./overwatch/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "loli")) {
+                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./loli/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "animal")) {
+                message.delete();
                 number = 20;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./animal/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "redhead")) {
+                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./redhead/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "yaoi")) {
+                message.delete();
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./yaoi/" + imageNumber + ".jpg"] })
         }
         if(msg.startsWith (prefix + "blonde")) {
+                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./blonde/" + imageNumber + ".jpg"] })
         }       
         if(msg.startsWith (prefix + "ayaya")) {
+                message.delete()
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
         }       
         if(msg.startsWith (prefix + "command")) {
