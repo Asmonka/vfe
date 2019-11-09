@@ -82,6 +82,10 @@ client.on ("message", (message) => {
                 message.delete()
                 message.channel.send ({files: ["./tina/tina.gif"]})
         }
+        if(msg.startsWith (prefix + "nani")) {
+                message.delete()
+                message.channel.send ({files: ["./nani/nani.gif"]})
+        }
          
         if(msg.startsWith (prefix + "command")) {
                 message.delete()
@@ -97,7 +101,8 @@ client.on ("message", (message) => {
            .addField ("!redhead",  "redhead picture")
            .addField ("!white",  "white hair picture")
            .addField ("!yaoi",  "yaoi picture")
-           .addField ("!yuri",  "yuri picture")                            
+           .addField ("!yuri",  "yuri picture")
+           .addField ("!tina",  "tina picture")                            
            .setColor ("#FF0000");
            message.channel.send(embed);}
 })
