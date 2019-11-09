@@ -9,7 +9,6 @@ client.on ("ready", () => {
         client.user.setAuthor('Hentai', { type: 'WATCHING' });
        
 });
-var prefix = "!"
 const prefix = "!"
 client.on ("message", (message) => {
 
