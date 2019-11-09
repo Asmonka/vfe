@@ -77,7 +77,12 @@ client.on ("message", (message) => {
         if(msg.startsWith (prefix + "ayaya")) {
                 message.delete()
                 message.channel.send ({files: ["./ayaya/ayaya.gif"]})
-        }       
+        }
+        if(msg.startsWith (prefix + "tina")) {
+                message.delete()
+                message.channel.send ({files: ["./tina/tina.gif"]})
+        }
+         
         if(msg.startsWith (prefix + "command")) {
                 message.delete()
            embed = new discord.RichEmbed ()
