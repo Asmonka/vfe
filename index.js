@@ -6,11 +6,11 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
         console.log("ready!");
-
         client.user.setGame("Watching Hentai");
+       
 });
-
-const prefix = "!";
+var prefix = "!"
+const prefix = "!"
 client.on ("message", (message) => {
 
         message.content.toLowerCase();
