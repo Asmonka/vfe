@@ -6,7 +6,7 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
         console.log("ready!");
-        client.user.setActivity('Hentai', { type: 'WATCHING' });
+        client.user.setAuthor('Hentai', { type: 'WATCHING' });
        
 });
 var prefix = "!"
