@@ -18,4 +18,4 @@ bot.on('message', message => {
 
 });
 
-bot.login('NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs');
+bot.login('NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs')
