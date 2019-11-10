@@ -1,14 +1,17 @@
 const discord = require ('discord.js');
-const bot = new discord.Client();
+
+var client = new discord.Client();
+
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
-
-bot.on ("ready", () => {
+client.on ("ready", () => {
         console.log("ready!");
 
-        client.user.setActivity("Hentai" , {type: 'WATCHING'});
+        client.user.setGame("Hentai", {type: 'WATCHING'});
 });
-bot.on ("message", (message) => {
+
+const prefix = "!";
+client.on ("message", (message) => {
 
         message.content.toLowerCase();
 
@@ -106,4 +109,4 @@ bot.on ("message", (message) => {
 })
 
 
-client.login("NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs");
+client.login(process.env.BOT);
