@@ -7,11 +7,9 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 client.on ("ready", () => {
         console.log("ready!");
 
-        client.user.setActivity('Hentai', { type: 'WATCHING' });
-
-
-       
+        client.user.setGame("Watching Hentai");
 });
+
 const prefix = "!";
 client.on ("message", (message) => {
 
@@ -29,7 +27,6 @@ client.on ("message", (message) => {
         }
 
         if(msg.startsWith (prefix + "yuri")) {
-                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./yuri/" + imageNumber + ".jpg"] })
@@ -61,7 +58,7 @@ client.on ("message", (message) => {
         }
         if(msg.startsWith (prefix + "redhead")) {
                 message.delete()
-                number = 11;
+                number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./redhead/" + imageNumber + ".jpg"] })
         }
@@ -85,12 +82,6 @@ client.on ("message", (message) => {
                 message.delete()
                 message.channel.send ({files: ["./tina/tina.gif"]})
         }
-        if(msg.startsWith (prefix + "nani")) {
-                message.delete()
-                message.channel.send ({files: ["./nani/nani.gif"]})
-        }
-        db.updateValue(message)
-
          
         if(msg.startsWith (prefix + "command")) {
                 message.delete()
@@ -106,12 +97,9 @@ client.on ("message", (message) => {
            .addField ("!redhead",  "redhead picture")
            .addField ("!white",  "white hair picture")
            .addField ("!yaoi",  "yaoi picture")
-           .addField ("!yuri",  "yuri picture")
-           .addField ("!tina",  "tina GIF")                            
+           .addField ("!yuri",  "yuri picture")                            
            .setColor ("#FF0000");
            message.channel.send(embed);}
-
-           
 })
 
 
