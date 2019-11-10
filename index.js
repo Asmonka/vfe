@@ -1,10 +1,12 @@
 const discord = require ('discord.js');
+
 var client = new discord.client();
 
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
         console.log("ready!");
+
         client.user.setActivity('Hentai', { type: 'WATCHING' });
 
 
@@ -109,7 +111,7 @@ client.on ("message", (message) => {
            .setColor ("#FF0000");
            message.channel.send(embed);}
 
-           db.updateValue(lvl)
+           
 })
 
 
