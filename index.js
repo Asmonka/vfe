@@ -1,5 +1,5 @@
 const discord = require ('discord.js');
-var discord = require ('discord.js');
+var client = new discord.client();
 
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
@@ -10,7 +10,7 @@ client.on ("ready", () => {
 
        
 });
-const prefix = "!"
+const prefix = "!";
 client.on ("message", (message) => {
 
         message.content.toLowerCase();
