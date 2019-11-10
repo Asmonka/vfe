@@ -1,7 +1,5 @@
 const discord = require ('discord.js');
 var discord = require ('discord.js');
-var bot = discord.client();
-var client = new discord.Client();
 
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
@@ -21,7 +19,7 @@ client.on ("message", (message) => {
 
         msg = message.content.toLowerCase();
 
-        if(msg.startsWith (prefix + "white")) {
+        if(msg = (prefix + "white")) {
                 message.delete()
             number = 20;
             imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
