@@ -1,5 +1,7 @@
 const discord = require ('discord.js');
-var client = new discord.Client();
+const bot = new Discord.Client();
+const fs = require('fs');
+const db = require('quick.db');
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
