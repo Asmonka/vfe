@@ -18,11 +18,6 @@ client.on ("message", (message) => {
         if (message.author.bot) return;
 
         msg = message.content.toLowerCase();
-        if(msg === prefix + "join") {
-                voiceChannel.join()
-                .then(connection => console.log('Connected!'))
-                .catch(console.error);
-        }
         if(msg === (prefix + "white")) {
             message.delete()
             number = 20;
