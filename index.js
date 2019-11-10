@@ -1,7 +1,5 @@
 const discord = require ('discord.js');
-
 var client = new discord.Client();
-const db = require(quick.db);
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
@@ -9,7 +7,6 @@ client.on ("ready", () => {
 
         client.user.setActivity('Hentai' , { type: 'WATCHING' });
 });
-
 const prefix = "!";
 
 client.on ("message", (message) => {
@@ -112,19 +109,7 @@ client.on ("message", (message) => {
 
 
 
-           db.updatevalue(message.author.id + message.author.guild.id, 1).then(i =>  {
-                let message;
-                if (i.value == 25) message = 25;
-                else if (i.value == 25) message = 50;
-                else if (i.value == 25) message = 25;
-
-                if(!isNaN(message)){
-                db.updatevalue(`UserLevel_${message.author.id + message.guild.id}`, 1){
-                        message.channel.send(`You sent ${messages} messages, so you leveled up! You are now level ${o.value}`)
-                        }
-                }
-
-           })
+ 
 })
 
 
