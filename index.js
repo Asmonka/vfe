@@ -1,5 +1,7 @@
 const discord = require ('discord.js');
 const bot = new discord.Client();
+const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
+
 
 bot.on ("ready", () => {
         console.log("ready!");
@@ -104,4 +106,4 @@ bot.on ("message", (message) => {
 })
 
 
-bot.login("NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs");
+client.login("NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs");
