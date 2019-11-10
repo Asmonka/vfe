@@ -1,7 +1,7 @@
 const discord = require ('discord.js');
 
 var client = new discord.Client();
-
+const db = require(quick.db);
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 
 client.on ("ready", () => {
@@ -11,6 +11,7 @@ client.on ("ready", () => {
 });
 
 const prefix = "!";
+
 client.on ("message", (message) => {
 
         message.content.toLowerCase();
@@ -20,10 +21,10 @@ client.on ("message", (message) => {
         msg = message.content.toLowerCase();
 
         if(msg === (prefix + "white")) {
-            message.delete()
-            number = 20;
-            imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
-            message.channel.send({files: ["./white/" + imageNumber + ".jpg"] })
+                message.delete()
+                number = 20;
+                imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
+                message.channel.send({files: ["./white/" + imageNumber + ".jpg"] })
         }
 
         if(msg.startsWith (prefix + "yuri")) {
@@ -87,11 +88,12 @@ client.on ("message", (message) => {
                 message.delete()
                 message.channel.send ({files: ["./nani/nani.gif"]})
         }
+
          
-        if(msg.startsWith (prefix + "command")) {
+        if(msg.startsWith (prefix + "commands")) {
                 message.delete()
            embed = new discord.RichEmbed ()
-           .setAuthor ("Command")
+           .setAuthor ("Commands")
            .addField ("!animal", "animal picture")
            .addField ("!ayaya", "ayaya GIF") 
            .addField ("!blonde", "blonde picture")
@@ -106,6 +108,23 @@ client.on ("message", (message) => {
            .addField ("!tina", "tina GIF")                           
            .setColor ("#FF0000");
            message.channel.send(embed);}
+
+
+
+
+           db.updatevalue(message.author.id + message.author.guild.id, 1).then(i =>  {
+                let message;
+                if (i.value == 25) message = 25;
+                else if (i.value == 25) message = 50;
+                else if (i.value == 25) message = 25;
+
+                if(!isNaN(message)){
+                db.updatevalue(`UserLevel_${message.author.id + message.guild.id}`, 1){
+                        message.channel.send(`You sent ${messages} messages, so you leveled up! You are now level ${o.value}`)
+                        }
+                }
+
+           })
 })
 
 
