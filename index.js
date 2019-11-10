@@ -1,4 +1,5 @@
 const discord = require ('discord.js');
+const db = require('quick.db');
 
 var client = new discord.Client();
 
@@ -7,7 +8,7 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 client.on ("ready", () => {
         console.log("ready!");
 
-        client.user.setGame("Hentai");
+        client.user.setAtivity("Hentai" , {type: 'WATCHING'});
 });
 
 const prefix = "!";
