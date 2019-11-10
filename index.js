@@ -1,15 +1,13 @@
 const discord = require ('discord.js');
-const bot = new discord.Client();
+const botconfig = require ("./botconfig.js")
 
-const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
+const bot = new discord.Client();
 
 bot.on ("ready", () => {
         console.log("ready!");
 
         client.user.setActivity("Hentai" , {type: 'WATCHING'});
 });
-
-const prefix = "!";
 bot.on ("message", (message) => {
 
         message.content.toLowerCase();
@@ -108,4 +106,4 @@ bot.on ("message", (message) => {
 })
 
 
-client.login(process.env.BOT);
+client.login(botconfig.token);
