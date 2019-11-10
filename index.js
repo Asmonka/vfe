@@ -1,7 +1,5 @@
 const discord = require ('discord.js');
-const botconfig = require ("./botconfig.js")
-
-const bot = new discord.Client();
+const bot = new discord.client();
 
 bot.on ("ready", () => {
         console.log("ready!");
@@ -106,4 +104,4 @@ bot.on ("message", (message) => {
 })
 
 
-client.login(botconfig.token);
+client.login("NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs");
