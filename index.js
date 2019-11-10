@@ -7,7 +7,7 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 client.on ("ready", () => {
         console.log("ready!");
 
-        client.user.setGame("Hentai");
+        client.user.setGame('Hentai' , { type: 'WATCHING' });
 });
 
 const prefix = "!";
