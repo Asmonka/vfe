@@ -19,7 +19,7 @@ client.on ("message", (message) => {
 
         msg = message.content.toLowerCase();
 
-        if(msg = (prefix + "white")) {
+        if(msg === (prefix + "white")) {
             message.delete()
             number = 20;
             imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
