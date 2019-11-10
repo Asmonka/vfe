@@ -8,12 +8,7 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 client.on ("ready", () => {
         console.log("ready!");
         client.user.setActivity('Hentai', { type: 'WATCHING' });
-        var sender = message.author;
-        var msg = message.content.toUpperCase();
-        var prefix = '!';
-        if (msg === prefix + 'PING'){
-        message.channel.send('Pong')
-        }
+
 
        
 });
@@ -115,6 +110,8 @@ client.on ("message", (message) => {
            .addField ("!tina",  "tina GIF")                            
            .setColor ("#FF0000");
            message.channel.send(embed);}
+
+           db.updateValue(lvl)
 })
 
 
