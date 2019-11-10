@@ -1,5 +1,6 @@
 const discord = require ('discord.js');
-
+var discord = require ('discord.js');
+var bot = discord.client();
 var client = new discord.Client();
 
 const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
@@ -7,6 +8,13 @@ const token = "NTI1OTcwODUyNTg0NjIwMDQ2.Dv-YcA.awpix-ITU9cmIosBxlxvNp_t6Gs";
 client.on ("ready", () => {
         console.log("ready!");
         client.user.setActivity('Hentai', { type: 'WATCHING' });
+        var sender = message.author;
+        var msg = message.content.toUpperCase();
+        var prefix = '!';
+        if (msg === prefix + 'PING'){
+        message.channel.send('Pong')
+        }
+
        
 });
 const prefix = "!"
@@ -26,6 +34,7 @@ client.on ("message", (message) => {
         }
 
         if(msg.startsWith (prefix + "yuri")) {
+                message.delete()
                 number = 10;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./yuri/" + imageNumber + ".jpg"] })
@@ -85,6 +94,8 @@ client.on ("message", (message) => {
                 message.delete()
                 message.channel.send ({files: ["./nani/nani.gif"]})
         }
+        db.updateValue(message)
+
          
         if(msg.startsWith (prefix + "command")) {
                 message.delete()
@@ -101,7 +112,7 @@ client.on ("message", (message) => {
            .addField ("!white",  "white hair picture")
            .addField ("!yaoi",  "yaoi picture")
            .addField ("!yuri",  "yuri picture")
-           .addField ("!tina",  "tina picture")                            
+           .addField ("!tina",  "tina GIF")                            
            .setColor ("#FF0000");
            message.channel.send(embed);}
 })
