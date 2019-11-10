@@ -9,7 +9,7 @@ client.on ("ready", () => {
 
         client.user.setActivity("Hentai (!help)", {type: 'WATCHING'});
 });
-
+global.server = {};
 const prefix = "!";
 client.on ("message", (message) => {
 
@@ -18,7 +18,11 @@ client.on ("message", (message) => {
         if (message.author.bot) return;
 
         msg = message.content.toLowerCase();
-
+        if(msg === prefix + "join") {
+                voiceChannel.join()
+                .then(connection => console.log('Connected!'))
+                .catch(console.error);
+        }
         if(msg === (prefix + "white")) {
             message.delete()
             number = 20;
