@@ -58,7 +58,7 @@ client.on ("message", (message) => {
         }
         if(msg === (prefix + "redhead")) {
                 message.delete()
-                number = 10;
+                number = 11;
                 imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
                 message.channel.send({files: ["./redhead/" + imageNumber + ".jpg"] })
         }
